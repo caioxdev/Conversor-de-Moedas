@@ -25,9 +25,22 @@ body {
     background-color: #000000;
 }
 
+header {
+    background-image: url(./assets/img/faixa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 80px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
-    width: 430px;
-    height: 820px;
+    width: 100%;
+    max-width: 430px;
+    min-height: 820px;
     background-color: var(--cor-fundo);
 }
 
@@ -35,11 +48,8 @@ main {
     padding: 1.7rem;
 }
 
-header h1 {
-    position: absolute;
-    top: 4.8rem;
-    left: 50%;
-    transform: translateX(-50%);
+h1 {
+    position: static;
     color: #000;
     font-family: Poppins;
     font-size: 1.4rem;
@@ -47,28 +57,45 @@ header h1 {
 }
 
 label {
-    display: flex;
-    flex-direction: column;
+    display: block;
     color: var(--cor-principal);
     font-family: Poppins;
     font-size: 0.9rem;
     font-weight: 600;
-    gap: 0.625rem;
+    margin-top: 0.625rem;
 }
 
 select,
 input {
-    width: 380px;
+    width: 100%;
     height: 40px;
     margin-bottom: 0.625rem;
     padding-left: 0.8rem;
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(5, 13, 29, 0.18);
+    border: 2px solid #818181;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    color: #474747;
+    font-family: Poppins;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+select {
+    appearance: none;
+}
+
+input {
+    cursor: text;
 }
 
 button {
-    width: 380px;
+    width: 100%;
     height: 40px;
     border-radius: 20px;
-    background: var(--cor-btn-principal);
+    background-color: var(--cor-btn-principal);
     box-shadow: 0 8px 0 var(--cor-btn-secundaria);
     border: none;
     color: #FFF;
@@ -76,10 +103,38 @@ button {
     font-size: 1rem;
     font-weight: 600;
     margin: 1.2rem 0;
+    transition: opacity 0.2s ease, 
+    transform 0.1s ease;
 }
 
-section {
-    position: relative;
-    left: 45%;
+button:hover {
+    opacity: 0.8;
 }
 
+button:active {
+    transform: translateY(2px);
+    opacity: 0.6;
+}
+
+.container-bandeiras {
+    text-align: center;
+}
+
+.container-bandeiras .texto-moeda {
+    color: #818181;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.container-bandeiras .texto-preco {
+    color: #3193EE;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+section #seta {
+    display: block;
+    margin: 19px auto;
+}
