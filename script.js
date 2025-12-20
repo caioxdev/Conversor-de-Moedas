@@ -39,9 +39,7 @@ const changeMoeda = () => {
   if (select.value === "USD") {
     textoMoeda.innerHTML = "Dólar americano";
     moedaImagem.src = "./assets/img/bandeira-eua.png";
-  }
-
-  if (select.value === "EUR") {
+  } else if (select.value === 'EUR') {
     textoMoeda.innerHTML = "Euro";
     moedaImagem.src = "./assets/img/bandeira-euro.png";
   }
